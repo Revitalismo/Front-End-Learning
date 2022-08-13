@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containers {
+    height: 200px;
+    width: 100vw;
+    margin: 1em auto;
+
+    border: 5px solid rgb(95, 207, 255);
+
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    /* auto-fill & auto-fit memberi tahu browser bahwa lebar container
+       sudah tidak lebar lagi, dan itu membuat kolom turun ke baris 2(di wrap)
+       
+       method minmax() berfungsi untuk memberi tahu browser jika lebar container
+       kurang dari 600px maka kolom menjadi 2 baris(wrap)
+       
+       -auto-fit mengepaskan lebar kolom sesuai sisa ruang yang tersedia
+       -auto-fill membuat kolom baru jika ruang yang tersedia cukup*/
+
+
+    column-gap: 5px;
+}
+
+.auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.items {
+    background-color: brown;
+    color: snow;
+}
